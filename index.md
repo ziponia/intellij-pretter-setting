@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+prettier 를 global 로 설치합니다.
 
-You can use the [editor on GitHub](https://github.com/ziponia/intellij-pretter-setting/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+$ npm install -g prettier
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+intellij plugin 의 File Watchers 와 prettier 를 설치합니다.
 
-### Jekyll Themes
+> _File > Settings > Plugins > Marketplace > 'prettier' and 'File Watchers' install_
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ziponia/intellij-pretter-setting/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+<img src="./image/20190429_104557.png" style="max-width: 600px" />
 
-### Support or Contact
+intellij 를 재부팅 후에 아래 경로로 다시 이동합니다.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+> _File > Settings > Tools > File Watchers_
+
+- 더하기모양(+) 을 클릭합니다.
+- Prettier 를 선택합니다.
+
+다른건 기본값으로 놔두고 prettier 가 관여 할 파일 확장자와, program 항목만 설정할겁니다.
+
+<img src="./image/20190429_105213.png" style="max-width: 600px" />
+
+_File type_ 에 저 같은경우 typescript 와 webpack 을 자주 사용하기 때문에 그냥 any 로 설정하였습니다.
+
+_Program_ 항목에서는 아까 `npm install -g prettier` 로 설치 한 경로를 입력 해줍니다.
+
+> 아마도 window 기본값은 `C:\Users\{username}\AppData\Roaming\npm\prettier.cmd` 인 것 같습니다.
+
+위 사진과 같은 설정 끝. 그럼 intellij 에서 파일 저장시에 포맷이 바뀌는 것을 볼수 있습니다.
+
+<img src="./image/20190429_105751.png" style="max-width: 600px" />
+
+이 상태에서 저장 <code>ctrl + s</code> 을 누르면...
+
+<img src="./image/20190429_105859.png" style="max-width: 600px" />
+
+요렇게 됩니다. 세상 깨끗
+
+<img src="./image/20190429_105953.png" style="max-width: 600px" />
+
+#### 추신
+
+근데 그냥 vscode 쓸듯... 느려..
